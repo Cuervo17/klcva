@@ -1,0 +1,128 @@
+.detalles{
+    color: black;
+    height: 100dvh; 
+    max-width: 100%;
+    padding: 2em;
+    background-color: #000000c7;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 2fr;
+    overflow-x: hidden;
+    gap: 1rem; /* Añadir un gap general entre los elementos */
+}
+
+.aside1{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: #e9e2d8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-height: 40vh;
+    padding: 1rem;
+}
+
+.description{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    background-color: #e9e2d8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    max-height: 75vh;
+    padding: 1rem;
+    overflow-y: auto; /* Añadir scroll si el contenido es demasiado grande */
+}
+
+.producto{
+    background-image: url(../../public/fondo-product.webp);
+    background-size: cover;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: top;
+  
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center; 
+    align-items: center; 
+    padding: 1rem;
+}
+
+.imagen {
+    max-width: 125px; 
+    height: auto; 
+    display: block; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain;
+    background-color: #fdfdfd7e;
+    border: 3px solid #000000; /* Añade un borde de 3px de grosor con el color especificado */
+}
+
+
+.producto img:hover {
+    transform: scale(2.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.puja{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: #e9e2d8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (min-width: 1200px) {
+
+    .imagen{
+        max-width: 250px;
+    }
+    .producto img:hover {
+        transform: scale(1.5); 
+    }
+    
+
+    .detalles {
+        padding: 3em;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .description {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        max-height: 100%;
+    }
+
+    .producto {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 1rem;
+    }
+
+
+
+    .aside1 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        max-height: 50vh;
+    }
+
+    .puja {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        max-height: 50vh;
+    }
+}

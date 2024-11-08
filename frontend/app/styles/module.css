@@ -1,0 +1,26 @@
+/* styles.module.css */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .section {
+    padding: 50px 0; /* Ajusta el espaciado según sea necesario */
+  }
+  
+  .hero {
+    background-color: #f8f9fa; /* Color de fondo para la sección Hero */
+  }
+  
+  .faq {
+    background-color: #e9ecef; /* Color de fondo para la sección FAQ */
+  }
+  
+  .catalogo {
+    background-color: #f1f3f5; /* Color de fondo para la sección Catálogo */
+  }
+  
+  .unete {
+    background-color: #dee2e6; /* Color de fondo para la sección Únete */
+  }
+  
